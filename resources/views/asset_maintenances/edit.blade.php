@@ -45,8 +45,9 @@
         @include ('partials.forms.edit.supplier-select', ['translated_name' => trans('general.supplier'), 'fieldname' => 'supplier_id', 'required' => 'true'])
         @include ('partials.forms.edit.maintenance_type')
 
-        <!-- Title -->
-        <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
+      {{--
+                <!-- Title -->
+                <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
           <label for="title" class="col-md-3 control-label">
             {{ trans('admin/asset_maintenances/form.title') }}
           </label>
@@ -55,6 +56,7 @@
             {!! $errors->first('title', '<span class="alert-msg" aria-hidden="true"><i class="fas fa-times" aria-hidden="true"></i> :message</span>') !!}
           </div>
         </div>
+        --}}
 
         <!-- Start Date -->
         <div class="form-group {{ $errors->has('start_date') ? ' has-error' : '' }}">

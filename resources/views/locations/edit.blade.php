@@ -38,7 +38,9 @@
 </div>
     --}}
 
-@include ('partials.forms.edit.address')
+{{--
+    @include ('partials.forms.edit.address')
+    --}}
 
 <!-- LDAP Search OU -->
 @if ($snipeSettings->ldap_enabled == 1)

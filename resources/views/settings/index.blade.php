@@ -125,7 +125,8 @@
         </div>
 
 
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
+     {{--
+      <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
           <div class="box box-default">
             <div class="box-body text-center">
               <h5>
@@ -142,6 +143,7 @@
           </div>
         </div>
 
+      --}}
 
         <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
           <div class="box box-default">
@@ -159,7 +161,8 @@
           </div>
         </div>
 
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
+        {{--
+          <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
           <div class="box box-default">
             <div class="box-body text-center">
               <h5>
@@ -173,8 +176,10 @@
             </div>
           </div>
         </div>
+          --}}
 
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
+        {{--
+          <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
           <div class="box box-default">
             <div class="box-body text-center">
               <h5>
@@ -188,6 +193,8 @@
             </div>
           </div>
         </div>
+          
+          --}}
 
         <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
           <div class="box box-default">
@@ -218,9 +225,9 @@
             </div>
           </div>
         </div>
-
-
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
+      
+        {{--
+          <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
           <div class="box box-default">
             <div class="box-body text-center">
               <h5>
@@ -235,7 +242,12 @@
           </div>
         </div>
 
-      <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
+          
+          --}}
+
+        
+        {{--
+          <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
         <div class="box box-default">
           <div class="box-body text-center">
             <h5>
@@ -265,6 +277,8 @@
         </div>
       </div>
 
+
+
         <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
           <div class="box box-default">
             <div class="box-body text-center">
@@ -279,6 +293,9 @@
             </div>
           </div>
         </div>
+
+        --}}
+
 
 
       <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
@@ -296,6 +313,7 @@
         </div>
       </div>
 
+      {{--
         <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
           <div class="box box-default">
             <div class="box-body text-center">
@@ -310,6 +328,7 @@
             </div>
           </div>
         </div>
+        --}}
 
         @if (config('app.debug')=== true)
           <div class="col-md-4 col-lg-3 col-sm-6 col-xl-1">
@@ -348,9 +367,8 @@
   </div>
 </div>
 
-
-
-
+{{--
+  
 <div class="row">
   <div class="col-md-12">
     <div class="box box-default">
@@ -451,29 +469,22 @@
   </div><!--/col-md-8-->
 </div><!--/row-->
 
-
-
-
   @section('moar_scripts')
 <script nonce="{{ csrf_token() }}">
-
-
-
   var options = {
     valueNames: [ 'name', 'keywords', 'summary', 'help-block']
   };
-
   var settingList = new List('setting-list', options);
-
   $("#searchclear").click(function(){
     $("#searchinput").val('');
     settingList.search();
   });
 
-
-
 </script>
   @endsection
+  --}}
+
+
 
 @stop
 

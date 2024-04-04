@@ -337,7 +337,8 @@
                                                 {{ trans('general.viewassets') }}
                                             </a></li>
 
-                                        @can('viewRequestable', \App\Models\Asset::class)
+                                        
+                                            @can('viewRequestable', \App\Models\Asset::class)
                                             <li {!! (Request::is('account/requested') ? ' class="active"' : '') !!}>
                                                 <a href="{{ route('account.requested') }}">
                                                     <i class="fas fa-check fa-disk fa-fw" aria-hidden="true"></i>
@@ -345,6 +346,7 @@
                                                 </a></li>
                                         @endcan
 
+                                         
                                         <li {!! (Request::is('account/accept') ? ' class="active"' : '') !!}>
                                             <a href="{{ route('account.accept') }}">
                                                 <i class="fas fa-check fa-disk fa-fw"></i>
@@ -500,13 +502,15 @@
                                             ({{ (isset($total_archived_sidebar)) ? $total_archived_sidebar : '' }})
                                         </a>
                                     </li>
-                                    <li{!! (Request::query('status') == 'Requestable' ? ' class="active"' : '') !!}><a
+                                    {{--
+                                        <li{!! (Request::query('status') == 'Requestable' ? ' class="active"' : '') !!}><a
                                                 href="{{ url('hardware?status=Requestable') }}"><i
                                                     class="fas fa-check text-blue fa-fw"></i>
                                             {{ trans('admin/hardware/general.requestable') }}
                                         </a>
                                     </li>
 
+                                        --}}
                                     @can('audit', \App\Models\Asset::class)
                                         <li{!! (Request::is('hardware/audit/due') ? ' class="active"' : '') !!}>
                                             <a href="{{ route('assets.audit.due') }}">
@@ -538,11 +542,12 @@
                                                 {{ trans('general.bulk_checkout') }}
                                             </a>
                                         </li>
-                                            --}}
+                                            
                                         <li{!! (Request::is('hardware/requested') ? ' class="active"' : '') !!}>
                                             <a href="{{ route('assets.requested') }}">
                                                 {{ trans('general.requested') }}</a>
                                         </li>
+                                        --}} 
                                     @endcan
 
                                     @can('create', \App\Models\Asset::class)
@@ -760,11 +765,16 @@
                                             {{ trans('general.asset_maintenance_report') }}
                                         </a>
                                     </li>
-                                    <li>
+                                    
+                                    {{--
+                                        <li>
                                         <a href="{{ url('reports/unaccepted_assets') }}" {{ (Request::is('reports/unaccepted_assets') ? ' class="active"' : '') }}>
                                             {{ trans('general.unaccepted_asset_report') }}
                                         </a>
                                     </li>
+                                    
+                                        --}}
+                                    
                                     <li>
                                         <a href="{{ url('reports/accessories') }}" {{ (Request::is('reports/accessories') ? ' class="active"' : '') }}>
                                             {{ trans('general.accessory_report') }}
@@ -779,6 +789,7 @@
                             </li>
                         @endcan
 
+                       {{--
                         @can('viewRequestable', \App\Models\Asset::class)
                             <li{!! (Request::is('account/requestable-assets') ? ' class="active"' : '') !!}>
                                 <a href="{{ route('requestable-assets') }}">
@@ -788,6 +799,7 @@
                             </li>
                         @endcan
 
+                        --}}
 
                     </ul>
                 </section>

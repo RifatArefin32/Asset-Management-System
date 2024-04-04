@@ -439,6 +439,8 @@
                               </div>
                           </div>
 
+                          {{--
+                            
                           <!-- City -->
                           <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                               <label class="col-md-3 control-label" for="city">{{ trans('general.city') }}</label>
@@ -475,6 +477,7 @@
                               </div>
                           </div>
 
+                            --}}
                           <!-- Notes -->
                           <div class="form-group{!! $errors->has('notes') ? ' has-error' : '' !!}">
                               <label for="notes" class="col-md-3 control-label">{{ trans('admin/users/table.notes') }}</label>
