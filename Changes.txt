@@ -1,0 +1,140 @@
+1. we have to remove fax from the system
+	C:\laragon\www\Final BS-23\resources\views\partials\forms\edit\fax.blade.php (commented out this page)
+
+2. Location Name, Manager, Phone, Address, City, State, Country, Zip
+	C:\laragon\www\Final BS-23\resources\views\locations\edit.blade.php
+
+3. Custom fields:
+	Custom fields are used to generate custom fields and add them to particular field sets. Custom field sets are used in asset model.
+
+4. We should keep only category name and type in the category page
+	C:\laragon\www\Final BS-23\resources\views\categories\edit.blade.php
+
+5. Name, Support URL, Support Phone, Support Email, Upload Image in manufacture page
+	C:\laragon\www\Final BS-23\resources\views\manufacturers\edit.blade.php
+
+6. Supplier Name, Address, City, State, Country, Zip, Contact Name, Phone, Email, URL, Notes, Upload Image in supplier page
+	(No change; only change is fax info)
+
+7. Department Name, Phone, Manager, Upload Image in department page
+	C:\laragon\www\Final BS-23\resources\views\departments\edit.blade.php
+
+8. Keep only Company name and image.
+	C:\laragon\www\Final BS-23\resources\views\companies\edit.blade.php
+
+9. Delete predefined kit from the left side-bar
+	C:\laragon\www\Final BS-23\resources\views\layouts\default.blade.php
+
+10. Delete Quick Checkin (Asset) from the left side bar
+	C:\laragon\www\Final BS-23\resources\views\layouts\default.blade.php
+
+11. Create user form (remove email credentials, VIP user, auto assign, location, website, manager, end-date, language, city, Zip, country):
+	C:\laragon\www\Final BS-23\resources\views\users\edit.blade.php 
+
+12. Remove extra information from address field (Create User)
+13. Delete Requestable from left nav bar
+14. Email template configuration
+	C:\laragon\www\Asset Management System\resources\lang\am-ET\mail.php
+
+Admin Settings:
+1. Update General Settings:
+	C:\laragon\www\Final BS-23\resources\views\settings\general.blade.php
+	- Disable Gavatar
+2. Two factor Security:
+	C:\laragon\www\Final BS-23\resources\views\settings\security.blade.php
+	- Remove remote user settings
+
+
+
+Aseet:
+- Company
+- Asset Tag
+- Serial
+- Model
+- Status
+- Notes
+- Default Location
+- Requestable
+- Asset Name (Redundant: C:\laragon\www\Final BS-23\resources\views\hardware\edit.blade.php)
+- Warranty
+- BYOD
+- Order Number
+- Purchase Date
+- EOL Date
+- Supplier
+- Purchase Cost
+
+Lisence:
+- Software Name
+- Category Name
+- Product Key
+- Seats (Redundant: C:\laragon\www\Final BS-23\resources\views\licenses\edit.blade.php)
+- Min. QTY
+- Company
+- Manufacturer
+- Licensed to Name
+- Licensed to Email
+- Reassignable
+- Supplier
+- Order Number 
+- Purchase Cost
+- Purchase Date
+- Expiration Date
+- Termination Date (Redundant: C:\laragon\www\Final BS-23\resources\views\licenses\edit.blade.php)
+- Purchase Order Number (Redundant: C:\laragon\www\Final BS-23\resources\views\licenses\edit.blade.php)
+- Depreciation
+- Maintained (Redundant: C:\laragon\www\Final BS-23\resources\views\licenses\edit.blade.php)
+- Notes
+
+Assecories:
+- Company
+- Accessory Name
+- Category
+- Supplier
+- Manufacturer
+- Location
+- Model No.
+- Order Number
+- Purchase Date
+- Purchase Cost
+- Quantity
+- Min. QTY
+- Notes
+- Upload Image
+
+Consumable:
+- Company
+- Consumable Name
+- Category
+- Supplier
+- Manufacturer
+- Location
+- Model No.
+- Item No. (Redundant: C:\laragon\www\Final BS-23\resources\views\consumables\edit.blade.php)
+- Order Number
+- Purchase Date
+- Purchase Cost
+- Quantity
+- Min. QTY
+- Notes
+- Upload ImageNo file chosen
+
+Component:
+- Component Name
+- Category
+- Quantity
+- Min. QTY
+- Serial
+- Company
+- Location
+- Supplier
+- Order Number
+- Purchase Date
+- Purchase Cost
+- Notes
+- Upload Image
+
+Admin Settings:
+1. Remove localization, integrations (slack), LDAP, and so on
+	C:\laragon\www\Asset Management System\resources\views\settings\index.blade.php
+
